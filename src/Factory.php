@@ -5,13 +5,25 @@ namespace Fafaker;
 
 class Factory
 {
+    /*
+     * determine providers language
+     * */
+    protected string $lang;
 
-    public function __construct()
+    public function __construct($lang = 'fa')
     {
-
+        $this->lang = ucfirst($lang);
     }
 
-    public function __call(string $name , array $params):mixed
+    /*
+     * determine providers language
+    * */
+    public function lang($lang = 'fa'): void
+    {
+        $this->lang = ucfirst($lang);
+    }
+
+    public function __call(string $name, array $params): mixed
     {
         return $this->prepareClassName($name)::generate();
     }
@@ -26,6 +38,6 @@ class Factory
      */
     protected function prepareClassName(string $name): string
     {
-        return 'Fafaker\Providers\\'. ucfirst($name) .'Provider';
+        return 'Fafaker\Providers\\'.$this->lang.'\\' . ucfirst($name) . 'Provider';
     }
 }
