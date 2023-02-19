@@ -9,7 +9,7 @@ class FamilyProvider implements Generatable{
 
     use GenerateTrait;
 
-    protected array $storage = [
+    protected static array $storage = [
         'darbandi','mohammadi','moradi','momeni','karimi','askari','saedi','khalighi','karegar','mostafaye',
         'safari','shahmari','kord','kordi','khezri','khezr pur','nader pur','naderi','mahmudi','ghanbari',
         'ghaderi','saberi','sadeghi','jaberi','jabari','abdulahi','nosrati','narimani','zeyghami','khodadad',
