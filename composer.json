@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Halgord\\Fafaker\\": "src/"
+            "Fafaker\\": "src/"
         }
     },
     "authors": [
