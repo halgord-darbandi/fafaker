@@ -2,6 +2,6 @@
 
 namespace Fafaker\Providers\Contracts;
 
-interface ProvidersInterface {
+interface Generatable {
     public static function generate():mixed;
 }
